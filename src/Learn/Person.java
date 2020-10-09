@@ -1,7 +1,7 @@
 package Learn;
 // 这是一个 javaBean (构造器 + Getter&Setter )
 public class Person {
-    public Person(Integer id, String name) {
+    public Person(String name, Integer id) {
         this.id = id;
         this.name = name;
     }
