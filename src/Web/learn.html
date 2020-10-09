@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>learn</title>
+</head>
+<body style="background:lavenderblush">  <!-- style= 设置标签内的属性-->
+<div align="center" style="">  <!--div 用来分层-->
+    <!-- img插入图片链接, alt后加图片加载失败时的提示文字  -->
+    <img src="https://transeeker-view.azurewebsites.net/img/logo.png?1472642639" alt="日建リース工業(株)"/>
+    <!--h1~6 表标题-->  <!--em 倾斜强调 ,b 强调,sub下标化-->
+    <!--    <h1><em>Transeeker位置管理システム</em></h1>-->
+    <h2 align="center">ユーザー登録</h2>  <!-- 二级标题 -->
+    <form action="" name="login" method="post" >  <!-- form表单后台做交互 post提交方法安全不显示用户信息-->
+        <!-- radio 单选圆点按钮 checked设置为默认选项 -->
+        <input type="radio" name="server" checked>一般 <input type="radio" name="server">管理者 <br>
+        <!-- minlenth 表示最小输入字符的个数 -->
+        <input type="text" placeholder="IDを入力して下さい" name="input_id" minlength="3" maxlength="10" pattern="3~10文字"> <br>
+        <input type="password" placeholder="PWを入力して下さい" name="input_password"><br>
+        <input type="button" value="登録"> <br><br> <!--  <input type="submit">  &lt;!&ndash; 提交按钮 &ndash;&gt;-->
+    </form>
+
+    <form action="" name="position">
+        <input type="text" placeholder="RFID番号を入力して下さい" name="search_RFID">
+        <button name="search_RFID" id="bt_search">RFID番号検索</button>　&nbsp;&nbsp;
+        <label for="RFID">最新位置一覧</label> <!-- label提示名称,for=值 需与id一致 -->
+        <select name="RFID番号" id="RFID" > <!-- 下拉列表多选栏 multiple多选 size设置显示的数量 -->
+            <option value="全体状況">全体状況</option>
+            <option value="008">007</option>
+            <option value="009">008</option>
+        </select>
+    </form>
+    <br><br><br>
+    <!-- table[border=1]> caption{位置情} + tr>th*6+tr*6>td*６ ,Tab生成,border是表的边框的宽窄 cellspacing是边框单线,padding内边距-->
+    <table style="width: 600px; background: #ffb6c1; " border="1" cellspacing="0" cellpadding="5" >
+        <caption>位置情報</caption>  <!-- caption 是显示的表格名 -->
+        <tr>  <!--表格的行-->
+            <th>RFID番号</th> <!--th是表头,会自动加粗且居中,决定表格的列数-->
+            <th>位置情報</th>
+            <th>経緯度</th>
+            <th>温度</th>
+            <th>電池残量</th>
+            <th>取得時間</th>
+
+        </tr>
+        <tr align="center"> <!--表格的第2行-->
+            <td>00777</td>  <!-- td 表示单元格 valign是垂直居中 -->
+            <td>東京都内xxxxx</td>
+            <td>lat: lng:</td>
+            <td>3.3V</td>
+            <td>36c</td>
+            <td>2020.10.1</td>
+
+        </tr>
+        <tr align="center"> <!--表格的第3行-->
+            <td>x1</td>
+            <td>x2</td>
+            <td>x3</td>
+            <td>x4</td>
+            <td>x5</td>
+            <td>x6</td>
+        </tr>
+    </table>
+
+    <!--ul>li{Info$}*3 Tab自动生成代码,$符号表生成编号 ul无序列表/ol有序列表 数字排序-->
+    <ul style="background: #ffc0cb; width: 570px; ">
+        <li>Info1</li>
+        <li>Info2</li>
+        <li>Info3</li>
+    </ul>
+
+    <!--a标签 插入超链接跳转,target=_blank是用新的窗口打开,tittle是鼠标指向时的内容提示框-->
+    <input type="image" src="img/nikken_logo.jpg" height="50" width="50"/>
+    <a href="https://transeeker-view.azurewebsites.net/" target="_blank" title="transeeker">Transeeker Viewシステム</a>
+    <figure>  <!-- 名称图片简介组合 -->
+        <h4>日建リース工業</h4>
+        <img src="img/logo.png" height="64" width="64"/>
+        <p>日建logo</p>
+    </figure>
+    <!-- 缩略名词解释下拉栏 -->
+    <details>
+        <summary>開発</summary>
+        <h2>ウェブ開発</h2>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </details>
+    <!-- dialog打开居中的窗口 -->
+    <dialog open style="align: end">
+        <span>&times;</span>   <!-- 窗口关闭的 x效果 -->
+        open windows
+    </dialog>
+
+    <!-- progress进度条标签 -->
+    <p>完成プログレスバー</p> <progress value="70" min="0" max="100"></progress>70%
+    <!-- hr 水平分割线 -->
+    <hr width="98%" color="pink" align="center" higtht="2px/">
+    <!--pre 预格式化是块级标签可识别宽高,保留空格换行 12号最小字号显示-->
+    <pre>  <!--big/small增大缩小文字,sub/sup下/上角线,调整文本的显示基线 -->
+    <h3><b>新型コロナウイルス感染拡大に伴う対応について</b></h3>
+      新型コロナウイルス感染症によりお亡くなりになられた方々に謹んでお悔やみ申し上げます。
+      また、罹患された方々におかれましては心よりお見舞い申し上げます。
+    &nbsp;
+                                                    &copy;日建リース工業(株)  <!--&..;转义符-->
+    </pre>
+</div>
+
+</body>
+<!--script放脚本语言 src=导入JS地址, defer表所有标签加载后 再执行js代码  -->
+<script src="JavaScript/jason.js" defer="defer">
+
+</script>
+
+
+
+
+</body>
+</html>

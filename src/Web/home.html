@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!--申明用html来解析以下代码-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  <!--IE浏览器打开方式edge设置-->
+    <title>Transeeker位置管理システム</title>
+    <meta name="keywords" content="日建リース工業(株)transeeker位置管理システム">　<!--网站搜索关键字 keywords-->
+    <meta name="description" content="日建リース工業株式会社transeeker位置管理システム"> <!--网站的内容描述 description-->
+    <!-- 设置网站小图标 link:favicon + tab键   -->
+    <link rel="shortcut icon" href="https://www.nrg.co.jp/nikkenlease/image/logo.gif" type="image/gif">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+    </style>
+</head>
+　
+<body style="background: lavenderblush">  <!-- style= 设置标签内的属性-->
+
+<div id="wrapper">  <!--iframe框架 scrolling滚动条设置 name用于跳转链接-->
+    <header id="header">
+        <img src="img/transeekerView_banner.png" alt="#">
+    </header>
+
+    <nav><!-- ul>li{分类$}*2>ul>li*5>a{地域$} -->
+        <ul>
+            <li>出庫分
+                <ul>  <!-- li中插入a链接,target转跳打开到同frame中 name=mapView 的iframe要素中 -->
+                    <li><a href="iframe/map_view.html" target="mapView">地域1</a></li>
+                    <li><a href="">地域2</a></li>
+                    <li><a href="">地域3</a></li>
+                    <li><a href="">地域4</a></li>
+                    <li><a href="">地域5</a></li>
+                </ul>
+            </li>
+            <li>未出庫分
+                <ul>
+                    <li><a href="">地域1</a></li>
+                    <li><a href="">地域2</a></li>
+                    <li><a href="">地域3</a></li>
+                    <li><a href="">地域4</a></li>
+                    <li><a href="">地域5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <iframe src="iframe/map_view.html" name="mapView"  scrolling="auto" frameborder="0"></iframe>
+
+        <table border="1"  cellspacing="0" cellpadding="5" style="background: lightpink">
+            <caption><b>詳細情報</b></caption>
+            <tr>
+                <th>RFID番号</th>
+                <th>位置情報</th>
+                <th>経緯度</th>
+                <th>温度</th>
+                <th>電池残量</th>
+                <th>取得時間</th>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr></tr>
+        </table>
+    </main>
+
+    <footer id="footer">
+        <pre>新型コロナウイルス感染拡大に伴う対応について
+        新型コロナウイルス感染症によりお亡くなりになられた方々に謹んでお悔やみ申し上げます。
+        また、罹患された方々におかれましては心よりお見舞い申し上げます。
+        &nbsp;
+        &copy;日建リース工業(株)
+        </pre>
+
+    </footer>
+
+</div>
+</body>
+<!--script放脚本语言 代码逻辑,W3C规范写法-->
+<script language="JavaScript" type="text/javascript">
+</script>
+
+</html>
